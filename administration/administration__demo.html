@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+
+    <!--Remixicon Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--Title Website-->
+    <title>TINFBE.COM | Elevate The Style Of Your Home </title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../assets/images/shortcut-icon.png">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body class="light-theme">
+    <div class="administration-area">
+        <div class="tabs">
+            <div class="tab-header">
+                <div class="active">Insert</div>
+                <div>Profile</div>
+                <div>Features</div>
+                <div>Team Info</div>
+                <div>Admin</div>
+                <div>Team Info</div>
+            </div>
+            <div class="tab-content">
+                <div class="active">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+                <div>
+                    <h2>Profile</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+                <div>
+                    <h2>Features</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+                <div>
+                    <h2>Team Info</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+                <div>
+                    <h2>Features</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+                <div>
+                    <h2>Team Info</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo hic delectus beatae maxime, ipsum illum sint nisi possimus porro dolores consectetur saepe et dolore animi, impedit repudiandae vitae voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let tabHeaders = document.querySelectorAll(".administration-area .tabs .tab-header>div");
+        let tabContents = document.querySelectorAll(".administration-area .tabs .tab-content>div");
+
+        for (let i = 0; i < tabHeaders.length; i++) {
+            tabHeaders[i].addEventListener("click", function() {
+                document.querySelector(".tabs .tab-header>.active").classList.remove("active");
+                tabHeaders[i].classList.add("active");
+                document.querySelector(".tabs .tab-content>.active").classList.remove("active");
+                tabContents[i].classList.add("active");
+            })
+        }
+    </script>
+</body>
+
+</html>
