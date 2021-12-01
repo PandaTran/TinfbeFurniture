@@ -84,7 +84,6 @@ a {
     color: var(--text-color-light);
     text-decoration: none;
 }
-
 a,
 button,
 li {
@@ -555,7 +554,7 @@ button:focus {
 
 .main-menu ul li>a.header__navbar-item-link {
     color: var(--text-color-light);
-    font-size: var(--md-font-size);
+    font-size: var(--lg-font-size);
     font-weight: var(--font-medium);
     display: inline-block;
     text-transform: uppercase;
