@@ -132,7 +132,7 @@
                         <nav class="header__navbar">
                             <ul class="header__navbar-list main-menu--list">
                                 <li class="header__navbar-item main-menu--item">
-                                    <a href="./index.html" class="header__navbar-item-link">Home</a>
+                                    <a href="./index.html" class="header__navbar-item-link active">Home</a>
                                 </li>
                                 <li class="header__navbar-item main-menu--item">
                                     <a href="./about-us.html" class="header__navbar-item-link">About Us</a>
@@ -248,7 +248,7 @@
                     <div class="logo d-flex">
                         <a href="./index.html" title="Tinfbe.com | Furniture Store">
                             <img src="./assets/images/shortcut-icon.png" alt="Tinfbe.com | Furniture Store">
-                            <span>tinfbe</span>
+                            <span>Tinfbe<small class="logo__format">Fur</small></span>
                         </a>
                     </div>
                 </div>
@@ -262,19 +262,39 @@
                                 </span>
                             </a>
                         </label>
-                        <label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none">
+                        <label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
                         </label>
+                        <input type="checkbox" class="header__search-input" id="header__search-target" hidden>
+                        <label for="header__search-target" class="overlay"></label>
+                        <div class="header-search-details">
+                            <label class="mobile-menu__close" for="header__search-target">
+                                <i class="ri-close-line" style="font-size: 20px;"></i>
+                            </label>
+                            <div class="header-search-content text-center">
+                                <h3 class="">Search in:</h3>
+                                <ul class="d-md-flex justify-content-between mt-5 md-display-none sm-display-none xs-display-none">
+                                    <li><a class="active" href="">All categories</a></li>
+                                    <li><a href="">Chair &amp; Tables</a></li>
+                                    <li><a href="">Floor</a></li>
+                                    <li><a href="">Home Accessories</a></li>
+                                    <li><a href="">Ceiling lights</a></li>
+                                </ul>  
+                                <form action="#" class="position-relative pt-5">
+                                    <input class="form-control" type="text" placeholder="Search Products...">
+                                    <a class="position-absolute" href="#"><span class="icon-search"></span></a>
+                                </form>
+                            </div>
+                        </div>
                         <label class="header__navbar-service--item header__navbar-item header__heart md-display-none sm-display-none xs-display-none">
-                            <button class="bg-transparent p-0" id="wishlist"  data-target="#wishlist">
+                            <button class="bg-transparent p-0" id="wishlist" data-target="#wishlist">
                                 <a href="./wishlist.html">
                                     <i class="header__navbar-service--icon ri-heart-3-line" title="Wishlist"></i>
-                                    <sup class="header__cart-notice total-wishlist"></sup>
                                 </a>
                             </button>
                         </label>
                         <label for="shopping-cart__area" class="header__navbar-service--item header__navbar-item header__cart">
-                            <button class="header__cart-wrap cart bg-transparent p-0" id="cart"  data-target="#cart">
+                            <button class="header__cart-wrap cart bg-transparent p-0" id="cart" data-target="#cart">
                                 <a href="cart.html">
                                     <i class="header__navbar-service--icon header__cart--icon ri-shopping-bag-3-line" title="Cart"></i>
                                     <sup class="header__cart-notice total-count"></sup>
@@ -308,7 +328,7 @@
     </div>
     <!--End Home-->
     <!--Start Checkout Area-->
-    <div class="checkout-area mb-50">
+    <div class="checkout-area section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -449,24 +469,24 @@
                             <div class="footer-logo">
                                 <a href="./index.html" class="d-block">
                                     <img src="./assets/images/shortcut-icon.png" alt="">
-                                    <span>tinfbe</span>
+                                    <span>Tinfbe<small class="logo__format">Fur</small></span>
                                 </a>
                             </div>
                             <p>Homess is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
-                            <ul class="social-link d-flex justify-content-center align-items-center my-4">
-                                <li>
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-google-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-linkedin-fill"></i></a>
-                                </li>
-                            </ul>
+                            <div class="footer-social">
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-facebook-fill footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-instagram-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-messenger-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-youtube-fill footer__social-icon"></i></a>
+                                </span>
+                            </div>
                             <ul class="footer-menu text-center d-inline-flex">
                                 <li>
                                     <a href="./blog.html">Blog</a>

@@ -132,13 +132,13 @@
                         <nav class="header__navbar">
                             <ul class="header__navbar-list main-menu--list">
                                 <li class="header__navbar-item main-menu--item">
-                                    <a href="./index.html" class="header__navbar-item-link">Home</a>
+                                    <a href="./index.html" class="header__navbar-item-link active">Home</a>
                                 </li>
                                 <li class="header__navbar-item main-menu--item">
                                     <a href="./about-us.html" class="header__navbar-item-link">About Us</a>
                                 </li>
                                 <li class="header__navbar-item main-menu--item">
-                                    <a href="#" class="header__navbar-item-link active">Store</a>
+                                    <a href="#" class="header__navbar-item-link">Store</a>
                                     <div class="header__dropdown-menu full__dropdown-menu">
                                         <div class="row">
                                             <ul class="sublist col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
@@ -248,7 +248,7 @@
                     <div class="logo d-flex">
                         <a href="./index.html" title="Tinfbe.com | Furniture Store">
                             <img src="./assets/images/shortcut-icon.png" alt="Tinfbe.com | Furniture Store">
-                            <span>tinfbe</span>
+                            <span>Tinfbe<small class="logo__format">Fur</small></span>
                         </a>
                     </div>
                 </div>
@@ -262,19 +262,39 @@
                                 </span>
                             </a>
                         </label>
-                        <label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none">
+                        <label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
                         </label>
+                        <input type="checkbox" class="header__search-input" id="header__search-target" hidden>
+                        <label for="header__search-target" class="overlay"></label>
+                        <div class="header-search-details">
+                            <label class="mobile-menu__close" for="header__search-target">
+                                <i class="ri-close-line" style="font-size: 20px;"></i>
+                            </label>
+                            <div class="header-search-content text-center">
+                                <h3 class="">Search in:</h3>
+                                <ul class="d-md-flex justify-content-between mt-5 md-display-none sm-display-none xs-display-none">
+                                    <li><a class="active" href="">All categories</a></li>
+                                    <li><a href="">Chair &amp; Tables</a></li>
+                                    <li><a href="">Floor</a></li>
+                                    <li><a href="">Home Accessories</a></li>
+                                    <li><a href="">Ceiling lights</a></li>
+                                </ul>  
+                                <form action="#" class="position-relative pt-5">
+                                    <input class="form-control" type="text" placeholder="Search Products...">
+                                    <a class="position-absolute" href="#"><span class="icon-search"></span></a>
+                                </form>
+                            </div>
+                        </div>
                         <label class="header__navbar-service--item header__navbar-item header__heart md-display-none sm-display-none xs-display-none">
-                            <button class="bg-transparent p-0" id="wishlist"  data-target="#wishlist">
+                            <button class="bg-transparent p-0" id="wishlist" data-target="#wishlist">
                                 <a href="./wishlist.html">
                                     <i class="header__navbar-service--icon ri-heart-3-line" title="Wishlist"></i>
-                                    <sup class="header__cart-notice total-wishlist"></sup>
                                 </a>
                             </button>
                         </label>
                         <label for="shopping-cart__area" class="header__navbar-service--item header__navbar-item header__cart">
-                            <button class="header__cart-wrap cart bg-transparent p-0" id="cart"  data-target="#cart">
+                            <button class="header__cart-wrap cart bg-transparent p-0" id="cart" data-target="#cart">
                                 <a href="cart.html">
                                     <i class="header__navbar-service--icon header__cart--icon ri-shopping-bag-3-line" title="Cart"></i>
                                     <sup class="header__cart-notice total-count"></sup>
@@ -291,42 +311,34 @@
     </header>
     <!--End Header-->
     <!--Start Home Carousel-->
-    <div class="product-carousel">
-        <div id="home__carousel" class="carousel slide content" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/service__addtocart.png" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/product__carousel(1).png" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/product__carousel(2).png" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/product__carousel(4).png" alt="">
-                </div>
+    <div class="home-area">
+        <div class="home__container">
+            <div class="background-overlay"></div>
+            <div class="shape shape-bottom" data-negative="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path opacity="0.33"
+                        d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
+                    </path>
+                    <path opacity="0.66"
+                        d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
+                    </path>
+                    <path
+                        d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
+                    </path>
+                </svg>
             </div>
-            <div class="text text-right sm-display-none xs-display-none">
-                <h6>New Product <span>2021</span></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dignissimos accusantium minus corporis perferendis natus. Tenetur minima velit aut impedit enim saepe voluptatum fuga rerum beatae molestias magnam, laboriosam id!</p>
-                <a href="./product.html" class="btn">Order Now</a>
-            </div>
-            <div class="footer">
-                <div class="prevNext">
-                    <a class="left carousel-control" href="#home__carousel" data-slide="prev">
-                        <span class="sr-only"><i class="ri-arrow-left-s-line"></i></span>
-                    </a>
-                    <a class="right carousel-control" href="#home__carousel" data-slide="next">
-                        <span class="sr-only"><i class="ri-arrow-right-s-line"></i></span>
-                    </a>
+            <div class="row align-items-center">
+                <div class="home__data col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center">
+                    <h3>welcome to tinfbe furniture</h3>
+                    <h1>Welcome To Furniture Store</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem commodi, illum neque asperiores earum assumenda natus vitae sed porro officia esse molestias a sunt itaque necessitatibus, corporis odit est id!</p>
                 </div>
             </div>
         </div>
     </div>
     <!--End Home Carousel-->
     <!--Start Top Product And Category-->
-    <div class="top-product-category-area overflow-hidden">
+    <div class="top-product-category-area overflow-hidden section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 pb-4">
@@ -379,7 +391,7 @@
     </div>
     <!--End Top Product And Categort-->
     <!--Start Features-->
-    <section class="features">
+    <section class="features section__area">
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12 offset-xl-3 offset-lg-3 offset-md-1">
@@ -542,7 +554,7 @@
     </section>
     <!--End Features-->
     <!--Start Sale Off Area-->
-    <div class="sale-off-area">
+    <div class="sale-off-area section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
@@ -619,7 +631,7 @@
     </div>
     <!--End Sale Off Area-->
     <!--Start Subscribe Area-->
-    <div class="subscribe-area">
+    <div class="subscribe-area section__area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
@@ -652,24 +664,24 @@
                             <div class="footer-logo">
                                 <a href="./index.html" class="d-block">
                                     <img src="./assets/images/shortcut-icon.png" alt="">
-                                    <span>tinfbe</span>
+                                    <span>Tinfbe<small class="logo__format">Fur</small></span>
                                 </a>
                             </div>
                             <p>Homess is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
-                            <ul class="social-link d-flex justify-content-center align-items-center my-4">
-                                <li>
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-google-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-linkedin-fill"></i></a>
-                                </li>
-                            </ul>
+                            <div class="footer-social">
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-facebook-fill footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-instagram-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-messenger-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-youtube-fill footer__social-icon"></i></a>
+                                </span>
+                            </div>
                             <ul class="footer-menu text-center d-inline-flex">
                                 <li>
                                     <a href="./blog.html">Blog</a>
