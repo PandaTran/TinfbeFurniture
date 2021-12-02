@@ -435,7 +435,7 @@ button:focus {
   right: 0;
   left: 0;
   background-color: hsl(0deg 0% 0% / 9%);
-  padding: 0 30px;
+  padding: 15px 30px;
 }
 
 /*Change background header*/
@@ -505,19 +505,19 @@ button:focus {
 /*---Scroll Bar---*/
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: var(--scroll-bar-color);
+  width: 7px;
+  height: 7px;
+  background-color: var(--white);
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
-  border-radius: 0.5rem;
+  background-color: var(--text-color);
+  border-radius: 2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -541,7 +541,6 @@ button:focus {
   font-weight: var(--font-medium);
   display: inline-block;
   text-transform: uppercase;
-  line-height: 60px;
   font-weight: var(--font-medium);
 }
 
@@ -747,7 +746,7 @@ button:focus {
 /*---Accordion Header - Accordion Category---*/
 
 .mobile-menu__icon {
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .mobile-menu__accordion {
@@ -1286,7 +1285,7 @@ sup {
 }
 
 .product__name {
-  font-size: var(--h3-font-size);
+  font-size: var(--lg-font-size);
   line-height: 1.5rem;
   margin: 4px 0px 0px 0px;
   overflow: hidden;
@@ -1314,7 +1313,7 @@ sup {
 }
 
 .product__price {
-  font-size: var(--h3-font-size);
+  font-size: var(--lg-font-size);
   font-weight: var(--font-medium);
   margin: 15px 0;
 }
@@ -1325,7 +1324,7 @@ sup {
   color: var(--danger);
   margin-right: 10px;
   font-weight: var(--font-semi-bold);
-  font-size: var(--h3-font-size);
+  font-size: var(--lg-font-size);
 }
 
 .product__price-old {
@@ -1337,16 +1336,17 @@ sup {
   left: -10px;
   opacity: 0;
   visibility: hidden;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .add-to-cart .add-to-cart--icon i {
   font-size: var(--lg-font-size);
   color: var(--text-color);
+  vertical-align: middle;
 }
 
 .add-to-cart .add-to-cart-title {
-  font-size: var(--xs-font-size);
+  font-size: var(--md-font-size);
   text-transform: uppercase;
   font-weight: var(--font-semi-bold);
   color: var(--text-color);
@@ -1428,7 +1428,7 @@ sup {
 
 .help-you-content,
 .subscribe-area-bg .container {
-  padding: 120px 80px 80px 80px;
+  padding: 120px 30px 80px 30px;
 }
 
 .help-you-content span {
