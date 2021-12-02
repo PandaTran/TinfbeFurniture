@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 :root {
-  --hue: 45;
-  --sat: 98%;
   /*Font weight*/
   --font-thin: 100;
   --font-extra-light: 200;
@@ -26,7 +24,7 @@
   --xxs-font-size: 0.63rem;
   --icon-font-size: 1.13rem;
   /*Color*/
-  --main-color: rgb(206, 40, 41);
+  --danger: rgb(206, 40, 41);
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
@@ -317,31 +315,31 @@ button:focus {
 /* ========== CHANGE DARK MODE ============ */
 
 .light-theme {
-  --body-bg: hsl(var(--hue), 0%, 100%);
-  --light-bg: hsl(var(--hue), 4%, 85%, 30%);
+  --body-bg: hsl(45, 0%, 100%);
+  --light-bg: hsl(45, 4%, 85%, 30%);
   --header-bg: hsl(0, 0%, 100%);
-  --text-color: hsl(var(--hue), 4%, 35%);
-  --title-color: hsl(var(--hue), 4%, 15%);
-  --text-color-light: hsl(var(--hue), 4%, 65%);
-  --first-color: hsl(var(--hue), var(--sat), 60%);
-  --first-color-light: hsl(var(--hue), var(--sat), 85%);
-  --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
-  --first-color-alt: hsl(var(--hue), var(--sat), 53%);
-  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
-  --scroll-bar-color: hsl(var(--hue), 4%, 85%);
+  --text-color: hsl(45, 4%, 35%);
+  --title-color: hsl(45, 4%, 15%);
+  --text-color-light: hsl(45, 4%, 65%);
+  --first-color: hsl(45, 98%, 60%);
+  --first-color-light: hsl(45, 98%, 85%);
+  --first-color-lighten: hsl(45, 98%, 80%);
+  --first-color-alt: hsl(45, 98%, 53%);
+  --scroll-thumb-color: hsl(45, 4%, 75%);
+  --scroll-bar-color: hsl(45, 4%, 85%);
 }
 
 .dark-theme {
   --body-bg: hsl(0, 0%, 13%);
   --light-bg: hsl(0, 0%, 10%);
   --header-bg: hsl(0, 0%, 20%, 1);
-  --text-color: hsl(var(--hue), 4%, 80%);
-  --title-color: hsl(var(--hue), 4%, 95%);
-  --text-color-light: hsl(var(--hue), 4%, 65%);
-  --first-color: hsl(var(--hue), var(--sat), 60%);
-  --first-color-light: hsl(var(--hue), var(--sat), 75%);
+  --text-color: hsl(45, 4%, 80%);
+  --title-color: hsl(45, 4%, 95%);
+  --text-color-light: hsl(45, 4%, 65%);
+  --first-color: hsl(45, 98%, 60%);
+  --first-color-light: hsl(45, 98%, 75%);
   --first-color-lighten: #0000006b;
-  --first-color-alt: hsl(var(--hue), var(--sat), 53%);
+  --first-color-alt: hsl(45, 98%, 53%);
   --scroll-thumb-color: rgba(218, 220, 224, 1);
   --scroll-bar-color: rgba(95, 99, 104, 1);
 }
@@ -360,6 +358,7 @@ button:focus {
   color: var(--text-color);
   cursor: pointer;
   overflow: hidden;
+  font-weight: var(--font-semi-bold);
 }
 
 .more__btn svg {
@@ -377,11 +376,12 @@ button:focus {
 }
 
 .more__btn:hover {
-  color: var(--text-color-light);
+  color: var(--danger);
+  font-weight: var(--font-semi-bold);
 }
 
 .more__btn:hover svg rect {
-  stroke: var(--text-color-light);
+  stroke: var(--danger);
   stroke-width: 3;
   stroke-dasharray: 107, 311;
   stroke-dashoffset: 228;
@@ -406,8 +406,8 @@ button:focus {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  color: var(--text-color);
-  background-color: var(--first-color-light);
+  color: var(--header-bg);
+  background-color: var(--text-color);
 }
 
 .review-btn {
@@ -454,6 +454,9 @@ button:focus {
 }
 .section__area-bottom {
   padding: 0 40px 50px 40px;
+}
+.section__area-footer{
+  padding: 70px 0 0 0;
 }
 .header__navbar-item,
 .header__navbar-item-link,
@@ -822,7 +825,7 @@ button:focus {
 .logo span,
 .footer-logo span {
   font-family: "Barlow Condensed", sans-serif;
-  color: var(--header-bg);
+  color: var(--white);
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -1068,11 +1071,6 @@ sup {
   margin: 40px 0px 0px 0px;
 }
 
-.product-banner-area,
-.footer,
-.sale-off-area {
-  margin-top: 4rem;
-}
 .subscribe-area-bg {
   margin-top: 2rem;
 }
@@ -1107,9 +1105,10 @@ sup {
 /* =============== Small Product =================== */
 
 .sm-product__tag a {
-  font-size: var(--sm-font-size);
+  font-size: var(--xs-font-size);
   color: var(--text-color-light);
   margin: 5px 0px 0px 0px;
+  font-weight: var(--font-regular);
 }
 
 .sm-product__name {
@@ -1140,19 +1139,21 @@ sup {
 
 .sm-product__price {
   font-size: var(--sm-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   margin: 8px 0;
 }
 
 .add-to-cart .sm-add-to-cart--icon i {
   font-size: var(--lg-font-size);
   color: var(--text-color);
+  vertical-align: middle;
 }
 
 .add-to-cart .sm-add-to-cart-title {
   text-transform: uppercase;
   color: var(--text-color);
   font-size: var(--xs-font-size);
+  font-weight: var(--font-medium);
 }
 
 /* ============= PRODUCT ================= */
@@ -1285,14 +1286,14 @@ sup {
 }
 
 .product__name {
-  font-size: var(--sm-font-size);
+  font-size: var(--h3-font-size);
   line-height: 1.5rem;
   margin: 4px 0px 0px 0px;
   overflow: hidden;
   display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   color: var(--text-color);
 }
 
@@ -1301,26 +1302,30 @@ sup {
   top: 3px;
 }
 
-.product__like i {
-  color: var(--text-color);
+.product__like .ri-heart-fill {
+  color: var(--text-color-light);
   opacity: 0.5;
 }
-
+.product__like:hover .ri-heart-fill{
+  color: red;
+}
 .product__action {
   position: relative;
 }
 
 .product__price {
-  font-size: var(--lg-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  margin: 8px 0;
+  margin: 15px 0;
 }
-
+.sm-product__price .product__price-current{
+  font-size: var(--lg-font-size);
+}
 .product__price-current {
   color: var(--danger);
   margin-right: 10px;
   font-weight: var(--font-semi-bold);
-  font-size: var(--lg-font-size);
+  font-size: var(--h3-font-size);
 }
 
 .product__price-old {
@@ -1428,7 +1433,7 @@ sup {
 
 .help-you-content span {
   font-size: var(--h3-font-size);
-  color: var(--main-color);
+  color: var(--danger);
   font-family: var(--satisfy-font);
 }
 
@@ -1469,13 +1474,13 @@ sup {
   line-height: 1px;
   border-radius: 4px;
   outline: 0 none;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   background-color: var(--first-color-alt);
-  color: var(--text-color);
+  color: var(--white);
 }
 
 .more-view-btn:hover {
@@ -1532,10 +1537,12 @@ hr {
 
 .blog-area .card-body-content {
   font-weight: var(--font-regular);
-  font-size: var(--lg-font-size);
+  font-size: var(--md-font-size);
   color: var(--text-color);
 }
-
+.blog-area .card-footer ul{
+  margin-top: 10px;
+}
 .blog-area .card-footer ul li {
   margin-right: 20px;
 }
@@ -1920,8 +1927,8 @@ hr {
   padding: 0;
   margin-right: 10px;
   margin-bottom: 20px;
-  font-size: var(--h4-font-size);
-  font-weight: var(--font-medium);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
   color: var(--text-color-light);
   text-transform: uppercase;
 }
@@ -2009,6 +2016,7 @@ hr {
   font-weight: 400;
   color: var(--text-color);
   transition: 0.3s;
+  font-weight: var(--font-medium);
 }
 
 .sidebar-widget li a:hover {
@@ -2293,7 +2301,7 @@ input[type="radio"] {
 
 .blog-comment-area .review-btn {
   font-size: var(--sm-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
 }
 
 .blog-search input {
@@ -2312,7 +2320,7 @@ input[type="radio"] {
 }
 
 .recent-post span {
-  color: var(--main-color);
+  color: var(--danger);
   font-size: var(--lg-font-size);
   font-weight: var(--font-medium);
   font-family: var(--satisfy-font);
@@ -2321,14 +2329,13 @@ input[type="radio"] {
 /* =========== LOGIN/REGISTER ========== */
 
 .login-area {
-  min-height: 100vh;
+  min-height: 130vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 50px;
+  background-image: url(../images/home__banner.jpg);
 }
-
 .login-area .login__content {
   display: grid;
 }
@@ -2350,7 +2357,7 @@ input[type="radio"] {
 .login-area .login__register-form,
 .login-area .login__create-form {
   width: 100%;
-  background-color: var(--light-bg);
+  background-color: var(--white);
   padding: 2rem 3rem;
   border-radius: 1rem;
   text-align: center;
@@ -2376,12 +2383,14 @@ input[type="radio"] {
   font-size: var(--h3-font-size);
   margin-bottom: 2rem;
   color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
 }
 
 .login-area .login__forms .login__box {
   display: flex;
   padding: 0.5rem;
-  background-color: #fff;
+  background-color: var(--light-bg);
   margin-top: 1rem;
   border-radius: 0.5rem;
 }
@@ -2395,7 +2404,7 @@ input[type="radio"] {
   border: none;
   outline: none;
   color: var(--text-color-light);
-  background-color: #fff;
+  background-color: hsl(45deg 4% 85% / 0%);
 }
 
 .login-area .login__forms .login__input::placeholder {
@@ -2409,8 +2418,8 @@ input[type="radio"] {
   margin-left: auto;
   margin-top: 0.5rem;
   font-size: var(--xs-font-size);
-  font-weight: var(--font-regular);
-  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+  color: var(--danger);
 }
 
 .login-area .login__button {
@@ -2427,8 +2436,8 @@ input[type="radio"] {
 }
 
 .login-area .login__button:hover {
-  background-color: var(--body-bg);
-  color: var(--first-color-alt);
+  color: var(--title-color);
+  background-color: var(--first-color-alt);
 }
 
 .login-area .login__account,
@@ -2468,12 +2477,15 @@ input[type="radio"] {
 /* ============ CHECKOUT ============ */
 
 .coupon-area span,
-.checkout-area span,
 .checkout-area label {
   font-size: var(--sm-font-size);
   color: var(--text-color-light);
 }
-
+.checkout-area span{
+  font-size: var(--h4-font-size);
+  color: var(--danger) !important;
+  font-weight: var(--font-semi-bold);
+}
 .coupon-area input,
 .checkout-area input,
 .country-select select {
@@ -2607,8 +2619,8 @@ input[type="radio"] {
 .table thead th {
   vertical-align: bottom;
   color: var(--text-color);
-  font-size: var(--md-font-size);
-  font-weight: var(--font-medium);
+  font-size: var(--lg-font-size);
+  font-weight: var(--font-semi-bold);
   text-align: center;
   border-width: 0px;
 }
@@ -2666,10 +2678,10 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 28px 48px;
 }
 
-.p-name,
 .cart-price {
-  font-size: var(--md-font-size);
-  color: var(--text-color);
+  font-size: var(--h4-font-size);
+  color: var(--danger);
+  font-weight: var(--font-semi-bold);
 }
 
 .total-price-area h2 {
@@ -2695,7 +2707,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /* =========== WISHLIST ============= */
 
 .wishlist-area a {
-  font-size: var(--sm-font-size);
+  font-size: var(--lg-font-size);
 }
 
 .mobile-wishlist .p-img img {
